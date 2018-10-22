@@ -41,20 +41,19 @@ public class TestLogin {
     @Test
     public void loginToTestArena() {
         loginPage.loginAs(ADMIN_LOGIN, ADMIN_PASSWORD);
-        assert mainPage.isAvatarIsDisplayed();
+        assert mainPage.isAvatarIsDisplayed() : "Cannot login to TestArena";
     }
 
     @Test
     public void loginWithWrongPassword() {
         loginPage.loginAs(ADMIN_LOGIN, ADMIN_WRONG_PASSWORD);
-        assert loginPage.IsErrorDisplayed();
+        assert loginPage.IsErrorDisplayed() : "Login to TestArena is possible with wrong password";
     }
 
     @Test
-    public void isHeaderDisplayedOnAdministrationPage() throws InterruptedException {
+    public void isHeaderDisplayedOnAdministrationPage() {
         loginPage.loginAs(ADMIN_LOGIN, ADMIN_PASSWORD);
-        sleep(3000);
-        administrationPage.isProjectHeaderDisplayed();
+        assert administrationPage.isProjectHeaderDisplayed() : "Header 'Projekty' is not displayed";
     }
 
     @After

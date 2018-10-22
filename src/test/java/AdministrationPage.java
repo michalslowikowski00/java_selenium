@@ -15,8 +15,8 @@ public class AdministrationPage {
         return projectsHeader.getText();
     }
 
-    public void isProjectHeaderDisplayed(){
+    public boolean isProjectHeaderDisplayed(){
         adminButton.click();
-        assertTrue(getProjectsHeader().contains(PROJECT_HEADER));
+        return getProjectsHeader().equals(PROJECT_HEADER);
     }
 }
