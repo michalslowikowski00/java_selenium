@@ -1,18 +1,10 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.zip.Adler32;
-
-import static java.lang.Thread.sleep;
 
 
 public class TestLogin {
@@ -28,7 +20,7 @@ public class TestLogin {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "/Users/negativeone/Desktop/vistula_seleinum/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/Users/negativeone/Documents/programming/vistula_seleinum/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--lang=en");
         driver = new ChromeDriver(options);
