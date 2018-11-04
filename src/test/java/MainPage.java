@@ -9,9 +9,16 @@ public class MainPage {
 
     @FindBy(className = "avatar_header")
     WebElement avatarHeader;
+    @FindBy(className = "header_admin")
+    WebElement adminButton;
+
 
     public Boolean isAvatarIsDisplayed() {
         return avatarHeader.isDisplayed();
+    }
+
+    public void enterAdminPage(){
+        adminButton.click();
     }
 }
 

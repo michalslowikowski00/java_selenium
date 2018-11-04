@@ -45,6 +45,7 @@ public class TestLogin {
     @Test
     public void isHeaderDisplayedOnAdministrationPage() {
         loginPage.loginAs(ADMIN_LOGIN, ADMIN_PASSWORD);
+        mainPage.enterAdminPage();
         assert administrationPage.isProjectHeaderDisplayed() : "Header 'Projekty' is not displayed";
     }
 

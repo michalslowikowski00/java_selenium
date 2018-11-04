@@ -6,8 +6,6 @@ import static junit.framework.TestCase.assertTrue;
 public class AdministrationPage {
     String PROJECT_HEADER = "Projekty";
 
-    @FindBy(className = "header_admin")
-    WebElement adminButton;
     @FindBy(className = "content_title")
     WebElement projectsHeader;
 
@@ -16,7 +14,7 @@ public class AdministrationPage {
     }
 
     public boolean isProjectHeaderDisplayed(){
-        adminButton.click();
+//        adminButton.click();
         return getProjectsHeader().equals(PROJECT_HEADER);
     }
 }
